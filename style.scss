@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Syncopate&display=swap');
+html, body{
+    font-size: 16px;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Syncopate', sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    padding: 2rem 0;
+    color: white;
+    font-size: 3rem;
+    margin-top: 1rem;
+    div{
+        text-align: center;
+    }
+    span{
+        font-size: 2rem;
+    }
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    div{
+        height: 300px;
+        cursor: pointer;
+    }
+    div::after{
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(0,0,0,0.9)120%);
+    }
+    article:hover{
+        div{        
+            transform: scale(1.05);
+            transform: translate(-10px,-10px);
+            animation: popout 0.25s ease;
+        }
+        div::after{
+            opacity: 0;
+            transition: opacity 0.25s linear;
+        }
+    }
+    @keyframes popout{
+        0%{box-shadow: 10px 10px;}
+        100%{box-shadow: 10px 10px white;}
+    }
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 1.25rem;
+    p{
+        cursor: pointer;
+    }
+}
