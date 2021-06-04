@@ -1,0 +1,7 @@
+@media screen and (max-width: 767px) {
+  main {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+/*# sourceMappingURL=style_mobile.css.map */
